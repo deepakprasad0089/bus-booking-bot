@@ -22,7 +22,7 @@ mydb=mysql.connector.connect(
 mycursor=mydb.cursor()
 class Bot():
     def __init__(self, json):
-        # same as hospital bot
+        
         self.json = json
         self.dict_messages = self.json['messages']
         self.APIUrl = 'https://eu208.chat-api.com/instance<Instance id>/'
@@ -48,7 +48,7 @@ class Bot():
     
 
     def generate_payment_link(self, reference_id, amount):
-        # same as hospital bot
+        
         reference_id = reference_id
         data = {
             "amount": amount,
@@ -72,13 +72,7 @@ class Bot():
 
     def ask_next_question(self, chatID, text):
         return self.send_message(chatID, text)
-
-    def send_goodbye(self, chatID):
-        text = "Your order was discarded, Thank you for choosing us"
-        return self.send_message(chatID, text)
-
-    
-
+   
     
     def ticket_order(self, chatID, string):
         path = 'C:/Users/jmdee/Downloads/bus-booking-bot-main/bus-booking-bot-main/bus-booking-bot/orders/'+chatID+'_ongoing.json'
@@ -96,7 +90,7 @@ class Bot():
     
     
     def processing(self):
-        # same as hospital bot
+        
         t=''
         a=''
         #li=[]
